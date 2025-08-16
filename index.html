@@ -14,6 +14,9 @@
       --accent2:#00d4ff;      /* secondary accent (cyan) */
       --glass:rgba(255,255,255,0.03);
       --radius:14px;
+      --notice-bg: rgba(255, 215, 110, 0.06);
+      --notice-border: rgba(255, 215, 110, 0.14);
+      --notice-color: #ffd88a;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,var(--bg) 0%, #061428 100%);color:#eaf6fb}
@@ -23,6 +26,11 @@
     .badge{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#041725}
     h1{font-size:20px;margin:0}
     p.lead{color:var(--muted);margin:4px 0 0;font-size:13px}
+
+    /* Notice */
+    .disclaimer{margin-top:14px;padding:12px;border-radius:10px;background:var(--notice-bg);border:1px solid var(--notice-border);color:var(--notice-color);font-size:13px}
+    .disclaimer strong{color:#fff}
+
     .cols{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:18px}
     .panel{background:var(--panel);border-radius:var(--radius);padding:20px;box-shadow:0 8px 30px rgba(2,10,18,0.6)}
     .hero{display:flex;gap:18px}
@@ -46,7 +54,16 @@
     .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px}
     .devices{display:flex;flex-direction:column;gap:10px;margin-top:12px}
     .device{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:var(--glass)}
+
+    /* Compliance panel styling */
+    .compliance{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px}
+    .compliance ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+    .compliance li{margin-bottom:6px}
+
     footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+    .meta-links{margin-top:6px}
+    .meta-links a{color:var(--muted);text-decoration:underline;font-size:13px;margin:0 8px}
+
     @media (max-width:980px){.cols{grid-template-columns:1fr}.hero{flex-direction:column}}
   </style>
 </head>
@@ -64,6 +81,12 @@
         <button class="btn">Get Started</button>
       </div>
     </header>
+
+    <!-- Visible disclaimer to avoid confusion and help with ad compliance -->
+    <div class="disclaimer" role="note">
+      <strong>Demo &amp; design sample — not an official service.</strong>
+      This page is an example landing page created for demonstration and design guidance only. <em>ax ion</em> is a fictional brand for this mockup. We are not affiliated with any hardware wallet manufacturers, do not offer trading or custody services directly on this page, and do not guarantee asset performance. If you plan to use this template for advertising (for example on Google Ads) you must review legal, trademark and claims compliance and add a valid Privacy Policy and Terms of Service before publishing.
+    </div>
 
     <div class="cols">
       <main>
@@ -186,11 +209,30 @@
           <button class="btn" style="margin-top:10px">Contact Sales</button>
         </div>
 
+        <!-- Compliance / Ads checklist -->
+        <div class="panel compliance">
+          <h4 style="margin:0 0 8px">Advertising &amp; compliance</h4>
+          <div style="color:var(--muted);font-size:13px">This mockup includes recommended disclosures for ad platforms and legal review.</div>
+          <ul>
+            <li>Not an official service or affiliated with hardware manufacturers.</li>
+            <li>No buy/sell functionality is provided on this page.</li>
+            <li>No promises or guaranteed returns — financial disclaimers required for ads.</li>
+            <li>Privacy Policy and Terms of Service must be added before running ads.</li>
+            <li>All marketing claims should be verified by legal for Google Ads compliance.</li>
+          </ul>
+          <div style="margin-top:10px"><a href="#privacy" style="color:var(--accent2);text-decoration:underline">Privacy Policy</a> · <a href="#terms" style="color:var(--accent2);text-decoration:underline">Terms</a></div>
+        </div>
+
       </aside>
     </div>
 
     <footer>
       <div>© ax ion — Example design for guidance. Hardware custody only.</div>
+      <div class="meta-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact</a>
+      </div>
     </footer>
   </div>
 
