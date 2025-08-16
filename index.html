@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ax ion — Hardware Vault for Cryptocurrencies</title>
+  <meta name="description" content="Keep private keys offline, restore safely, and manage thousands of tokens with enterprise-grade hardware custody provided by ax ion.">
+  <style>
+    :root{
+      --bg:#071029;            /* overall page background */
+      --panel:#0e1624;         /* cards/panels */
+      --muted:#9aa8b6;         /* secondary text */
+      --accent:#7c5cff;       /* primary accent (purple) */
+      --accent2:#00d4ff;      /* secondary accent (cyan) */
+      --glass:rgba(255,255,255,0.03);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,var(--bg) 0%, #061428 100%);color:#eaf6fb}
+    .wrap{max-width:1100px;margin:36px auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .brand{display:flex;gap:12px;align-items:center}
+    .badge{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#041725}
+    h1{font-size:20px;margin:0}
+    p.lead{color:var(--muted);margin:4px 0 0;font-size:13px}
+    .cols{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:18px}
+    .panel{background:var(--panel);border-radius:var(--radius);padding:20px;box-shadow:0 8px 30px rgba(2,10,18,0.6)}
+    .hero{display:flex;gap:18px}
+    .kpis{display:flex;gap:10px;margin-top:16px}
+    .kpi{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px;text-align:center;flex:1}
+    .kpi strong{display:block;font-size:18px}
+    .actions{display:flex;gap:10px;margin-top:14px}
+    .btn{padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#041725;border:none;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .portfolio{margin-top:16px}
+    .portfolio .value{font-size:20px;font-weight:800}
+    .chart{height:120px;margin-top:12px}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:10px;text-align:left;font-size:13px}
+    th{color:var(--muted);font-size:12px}
+    tr+tr td{border-top:1px dashed rgba(255,255,255,0.03)}
+    .right-col{display:flex;flex-direction:column;gap:12px}
+    .status .row{display:flex;justify-content:space-between;align-items:center}
+    .pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04);font-size:13px}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px}
+    .devices{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .device{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;background:var(--glass)}
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:980px){.cols{grid-template-columns:1fr}.hero{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="badge">AX</div>
+        <div>
+          <h1>ax ion — Hardware Custody for Your Crypto</h1>
+          <p class="lead">Offline key custody, secure recovery flows, and enterprise-level resilience for long-term holders.</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn">Get Started</button>
+      </div>
+    </header>
+
+    <div class="cols">
+      <main>
+        <section class="panel hero">
+          <div style="flex:1">
+            <h2 style="margin:0 0 8px">Take full ownership of your private keys</h2>
+            <p style="color:var(--muted);margin:0">ax ion pairs tamper-resistant hardware with secure recovery workflows so you always keep control of access to your assets.</p>
+
+            <div class="kpis">
+              <div class="kpi"><strong>Millions+</strong><span style="color:var(--muted);font-size:12px">Trusted custody users</span></div>
+              <div class="kpi"><strong>12k+</strong><span style="color:var(--muted);font-size:12px">Tokens supported</span></div>
+              <div class="kpi"><strong>180+</strong><span style="color:var(--muted);font-size:12px">Countries covered</span></div>
+            </div>
+
+            <div class="actions">
+              <button class="btn">Create Vault</button>
+              <button class="btn ghost">See device list</button>
+            </div>
+
+            <div class="panel portfolio" style="margin-top:18px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-size:12px;color:var(--muted)">Portfolio summary</div>
+                  <div class="value">$152,870.50</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-size:12px;color:var(--muted)">Updated</div>
+                  <div style="font-weight:700">1 hour ago</div>
+                </div>
+              </div>
+
+              <div class="chart" aria-hidden="true">
+                <svg viewBox="0 0 300 120" preserveAspectRatio="none" style="width:100%;height:120px">
+                  <polyline fill="none" stroke="url(#g2)" stroke-width="3" points="0,92 30,78 60,70 90,60 120,54 150,40 180,45 210,38 240,30 270,24 300,28" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="g2" x1="0" x2="1"><stop offset="0%" stop-color="#7c5cff" stop-opacity="1"/><stop offset="100%" stop-color="#00d4ff" stop-opacity="1"/></linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <table>
+                <thead>
+                  <tr><th>Asset</th><th>Amount</th><th>Value</th><th>24h</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>BTC</strong> <span style="color:var(--muted);font-size:12px">Bitcoin</span></td><td>1.840000</td><td>$72,600.00</td><td style="color:#3dd48a">+2.9%</td></tr>
+                  <tr><td><strong>ETH</strong> <span style="color:var(--muted);font-size:12px">Ethereum</span></td><td>7.400000</td><td>$23,750.00</td><td style="color:#ffb86b">-1.2%</td></tr>
+                  <tr><td><strong>SOL</strong> <span style="color:var(--muted);font-size:12px">Solana</span></td><td>210.000000</td><td>$13,100.00</td><td style="color:#3dd48a">+5.4%</td></tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <button class="btn">Send</button>
+              <button class="btn ghost">Add token</button>
+            </div>
+
+          </div>
+
+          <aside style="width:320px">
+            <div class="panel status">
+              <div class="row"><div style="font-weight:700">Security status</div><div class="pill">Device connected</div></div>
+              <div class="row"><div>Authentication</div><div class="pill">Biometrics + 2FA</div></div>
+              <div class="row"><div>Recovery</div><div class="pill">Shamir backups</div></div>
+
+              <div style="margin-top:12px;font-weight:700">Quick actions</div>
+              <div style="display:flex;gap:8px;margin-top:8px"><button class="btn" style="flex:1;padding:8px">Receive</button><button class="btn ghost" style="flex:1;padding:8px">Send</button></div>
+
+              <div style="margin-top:12px;font-weight:700">Core features</div>
+              <div class="features">
+                <div class="feature"><strong>Hardened secure element</strong><div style="color:var(--muted);font-size:12px">Private keys live in certified secure hardware.</div></div>
+                <div class="feature"><strong>Real-time monitoring</strong><div style="color:var(--muted);font-size:12px">Anomaly detection guards your transactions.</div></div>
+                <div class="feature"><strong>Multi-sig support</strong><div style="color:var(--muted);font-size:12px">Flexible approvals for teams and institutions.</div></div>
+                <div class="feature"><strong>Geo-resilient infra</strong><div style="color:var(--muted);font-size:12px">Distributed architecture for high availability.</div></div>
+              </div>
+
+              <div style="margin-top:12px;font-weight:700">Compatible devices</div>
+              <div class="devices">
+                <div class="device"><div style="width:46px;height:46;border-radius:8px;background:linear-gradient(135deg,var(--accent),#a27bff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#022">LN</div><div style="flex:1"><div>Ledger Nano X</div><div style="color:var(--muted);font-size:12px">Bluetooth · Secure element</div></div><div style="font-weight:700">$139</div></div>
+                <div class="device"><div style="width:46px;height:46;border-radius:8px;background:linear-gradient(135deg,#ffd59a,#ff8f6b);display:flex;align-items:center;justify-content:center;font-weight:800;color:#222">TZ</div><div style="flex:1"><div>Trezor Model T</div><div style="color:var(--muted);font-size:12px">Touchscreen · Open-source</div></div><div style="font-weight:700">$159</div></div>
+                <div class="device"><div style="width:46px;height:46;border-radius:8px;background:linear-gradient(135deg,#c7b7ff,#9aa0ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#222">SP</div><div style="flex:1"><div>SafePal S1</div><div style="color:var(--muted);font-size:12px">Air-gapped · QR-based</div></div><div style="font-weight:700">$59</div></div>
+              </div>
+
+            </div>
+          </aside>
+        </section>
+
+        <section style="margin-top:14px" class="panel">
+          <h3 style="margin:0 0 8px">Latest activity</h3>
+          <p style="color:var(--muted);margin:0 0 10px;font-size:13px">Recent moves to and from your vault.</p>
+          <table>
+            <tbody>
+              <tr><td>Received BTC</td><td>+0.001200 BTC</td><td style="color:var(--muted);font-size:13px">6 hours ago</td></tr>
+              <tr><td>Sent ETH</td><td>-0.500000 ETH</td><td style="color:var(--muted);font-size:13px">1 day</td></tr>
+              <tr><td>Staked SOL</td><td>-20.000000 SOL</td><td style="color:var(--muted);font-size:13px">3 days</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </main>
+
+      <aside class="right-col">
+        <div class="panel">
+          <h3 style="margin:0 0 8px">Get protected</h3>
+          <p style="color:var(--muted);margin:0 0 12px">Install the app or use the web console. Initialize your hardware device and create secure recovery shares.</p>
+          <div style="display:flex;gap:8px;margin-bottom:12px"><button class="btn" style="flex:1">Download iOS</button><button class="btn" style="flex:1">Download Android</button></div>
+          <div><strong>Important</strong><p style="color:var(--muted);font-size:13px;margin:8px 0 0">ax ion provides hardware custody solutions only. We do not facilitate trading, exchanging, or purchasing tokens on your behalf.</p></div>
+        </div>
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px">FAQ</h4>
+          <details style="color:var(--muted);font-size:14px"><summary>How do backups work?</summary><div style="margin-top:8px">We support secret-sharing backups and secure, offline recovery options. Your private keys are never stored in our cloud.</div></details>
+          <details style="color:var(--muted);font-size:14px;margin-top:8px"><summary>Can I use my own hardware?</summary><div style="margin-top:8px">Yes — ax ion is compatible with leading hardware wallets. Check device compatibility before setup.</div></details>
+        </div>
+
+        <div class="panel">
+          <h4 style="margin:0 0 8px">Enterprise solutions</h4>
+          <p style="color:var(--muted);margin:0">Custom custody plans for organizations: role-based access, team approvals, and audit-ready logs.</p>
+          <button class="btn" style="margin-top:10px">Contact Sales</button>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div>© ax ion — Example design for guidance. Hardware custody only.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.btn').forEach(b=>b.addEventListener('click', ()=>{b.style.transform='translateY(-1px)';setTimeout(()=>b.style.transform='translateY(0)',120);}));
+  </script>
+</body>
+</html>
